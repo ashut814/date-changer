@@ -55,9 +55,9 @@ function Counter() {
         </span>
         <span>{date.toDateString()}</span>
       </p>
-      <div>
+      {(count !== 0 || step !== 1) ? <div>
         <button onClick={handleReset}>Reset</button>
-      </div>
+      </div> : null}
     </div>
   );
 }
